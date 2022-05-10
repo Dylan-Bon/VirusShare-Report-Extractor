@@ -15,8 +15,9 @@ import java.util.concurrent.TimeUnit;
 
 public class Main {
     private static final String KEY = "43exampleKey123"; // VirusShare API KEY
-    private static final String PATH = "C:\\Malware Samples\\406-hash-values.txt"; // Path to '.txt' file containing the hash values to search
+    private static final String PATH = "D:\\Malware Samples\\406 hash values.txt"; // Path to '.txt' file containing the hash values to search
     private static final File FILE = new File(PATH);
+
     private static int lineCount = 0;
     private static int reportsStored = 0;
     private static List<String> hashValues;
@@ -87,8 +88,10 @@ public class Main {
                 for (int length; (length = response.read(buffer)) != -1; ) { //write content of buffer to result
                     result.write(buffer, 0, length);
                 }
+
                 result.write('}'); //end of JSON file
                 addObject(result);
+
             } catch (IOException e) {
                 e.printStackTrace();
             }
