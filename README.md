@@ -1,5 +1,5 @@
 # VirusShare-Report-Extractor
-Used to query the VirusShare API to retrieve malware reports for a given list of malware sample MD5 hash values.
+Uses the VirusShare API to retrieve malware reports for a given list of malware sample MD5 hash values.
 Lists containing the MD5 hash values for each sample contained within VirusShare torrents can be found under virusshare.com/hashes.
 
 Reports are stored in a local MongoDB collection. The default database name is "virusshare_reports", the default collection name is "md5-406".
